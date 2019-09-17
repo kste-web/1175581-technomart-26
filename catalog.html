@@ -59,7 +59,61 @@
 			<li><a href="">Перфораторы</a></li>
 		</ul>
 		<section>
-			<!-- Тут будет форма для фильтра-->
+			<form method="get" action="">
+				<fieldset>
+					<legend>Производители:</legend>
+					<ul>
+						<li>
+							<label>
+								<input type="checkbox" name="bosch" checked>
+								Bosch
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="interskol">
+								Интерскол
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="makita" checked>
+								Makita
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="dewalt">
+								Dewalt
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="hitachi">
+								Hitachi
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Питание:</legend>
+					<ul>
+						<li>
+							<label>
+								<input type="radio" name="supply" checked>
+								Аккумуляторные
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="supply">
+								Сетевые
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+				<button type="submit">Показать</button>
+			</form>
 		</section>
 		<section>
 			<!-- Тут будет форма для сортировки-->
@@ -229,5 +283,18 @@
   			</p>
   		</section>
 	</footer>
+	<section>
+		<h2>Товар добавлен в корзину</h2>
+		<img width="66" height="66" src="img/modal-check.svg" alt="товар добавлен в корзину">
+		<ul>
+			<li>
+				<a href="">Оформить заказ</a>
+			</li>
+			<li>
+				<a href="">Продолжить покупки</a>
+			</li>
+		</ul>
+		<button type="button" aria-label="закрыть окно">x</button>
+	</section>
 </body>
 </html>
