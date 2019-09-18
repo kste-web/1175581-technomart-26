@@ -3,23 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-  	<header>
-  		<section>
-	  		<p>
+  	<header class="header-container">
+  		<section class="header-top">
+	  		<p class="logo">
 	  			<img width="109" height="19" src="img/logo.svg" alt="Логотип магазина Техномарт">   
 	  		</p>
 	  		<p>
-	  			<span>Поиск:</span>
+	  			<span class="search">Поиск:</span>
 	  			<input type="text">
 	  		</p>
 	  		<a href="">Закладки:<span>0</span></a>   
 	  		<a href="">Корзина:<span>0</span></a>
-	  		<a href="">Оформить заказ</a>
+	  		<a class="make-order" href="">Оформить заказ</a>
   		</section>
-  		<section>
-  			<p>
+  		<section class="header-bottom">
+  			<p class="shop-name">
   				Интернет-магазин<br>
   				строительных материалов<br>
   				и инструментов для ремонта
@@ -28,10 +30,12 @@
   					<a href="tel:+7(812)555-05-05">+7(812)555-05-05</a>
   					г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8
   				</address>
-  			<a href="">Войти</a>
-  			<a href="">Регистрация</a>
+  			<p class="login-buttons">
+  				<a href="">Войти</a>
+  				<a href="">Регистрация</a>
+  			</p>
   		</section>
-  		<nav>
+  		<nav class="header-nav">
   			<ul>
   				<li><a href="index.html">Главная</a></li>
   				<li><a href="">Компания</a></li>
@@ -44,9 +48,9 @@
   		</nav>
   	</header>
 
-  	<main>
-  		<h1>О нас</h1>
-  		<section>
+  	<main class="main-container">
+  		<h1 class="visually-hidden">О нас</h1>
+  		<section class="info about">
   			<h2>Компания "Техномарт"</h2>
   			<p>
   				Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и<br>
@@ -63,7 +67,7 @@
   			</ul>
   			<a href="">Подробнее о компании</a>
   		</section>
-  		<section>
+  		<section class="info contacts">
   			<h2>Контакты</h2>
   			<p>
   				Вы можете забрать товар сами, заехав в наш офис:
@@ -75,9 +79,11 @@
   		</section>
   	</main>
 
-  	<footer>
-  		<section>
-  			<img width="109" height="19" src="img/logo.svg" alt="Логотип магазина Техномарт">
+  	<footer class="footer-container">
+  		<section class="footer-top">
+  			<p class="logo">
+  				<img width="109" height="19" src="img/logo.svg" alt="Логотип магазина Техномарт">
+  			</p>
   			<address>
   				г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8	
   				<a href="tel:+7(812)555-05-05">+7(812)555-05-05</a>
@@ -94,7 +100,7 @@
 	  			<li><a href="">Спецпредложения</a></li>	
 	  		</ul>
   		</section>
-  		<section>
+  		<section class="footer-bottom">
   			<p>
   				© 2010-2017 Компания "Техномарт"<br>
   				Все права защищены
@@ -115,14 +121,14 @@
   			</p>
   		</section>
   	</footer>
-  	<section>
+  	<section class="modal-map">
 		<h2 class="visualy-hidden">Как до нас добраться</h2>
 		<p>
 			<img width="940" height="446" src="img/map.jpg" alt="Адрес компании: Спб, ул. Большая Конюшенная 19">
 		</p>
 		<button type="button" aria-label="закрыть окно">x</button>
 	</section>
-	<section>
+	<section class="modal-letter">
 		<form method="post" action="https://echo.htmlacademy.ru">
 			<p>
 				<label>
