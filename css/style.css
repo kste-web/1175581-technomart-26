@@ -30,7 +30,8 @@ ul {
 }
 
 .modal-map,
-.modal-letter {
+.modal-letter,
+.modal-add {
 	display: none;
 }
 /*HEADER*/
@@ -85,9 +86,23 @@ ul {
 	font-size: 14px;
 }
 
-.header-phone {
+.header-phone a {
 	color: #ee3643;
 	font-size: 21px;
+}
+
+.user-info {
+
+}
+
+.user-name {
+	font-size: 21px;
+}
+
+.user-info-list a {
+	color: #32425c;
+	font-size: 16px;
+	text-decoration: underline;
 }
 
 
@@ -120,7 +135,8 @@ ul {
 	background-color: #293449;
 }
 
-/*Main*/
+/*Main-index*/
+
 .about-list {
 	font-size: 18px;
 }
@@ -141,6 +157,117 @@ ul {
 .info-button {
 	color: #ffffff;
 	background-color: #ee3643;
+}
+
+/*Main-catalog*/
+
+.catalog-header {
+	font-size: 30px;
+	color: #32425c;
+	text-transform: uppercase;
+}
+
+.catalog-nav a {
+	font-family: "PTSans", "Arial", sans-serif;
+	font-size: 13px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.catalog-filter {
+	font-family: "PTSans", "Arial", sans-serif;
+}
+
+.catalog-filter fieldset {
+	border: 0;
+}
+
+.catalog-filter legend {
+	font-size: 17px;
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.manufactures-list li  {
+	font-size: 15px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.supply-list li {
+	font-size: 15px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.button-filter {
+	font-size: 13px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.catalog-items {
+	font-family: "PTSans", "Arial", sans-serif;
+}
+
+.catalog-items-info h3 {
+	font-weight: bold;
+	font-size: 18px;
+	color: #000000;
+}
+
+.catalog-item-info del {
+	font-weight: bold;
+	font-size: 17px;
+	color: #999999;
+}
+
+.catalog-item-price {
+	font-size: 17px;
+	color: #ffffff;
+}
+
+.catalog-item-price  {
+	width: 141px;
+	height: 38px;
+	background-image: url("../img/item-button.svg");
+}
+
+.item-buy {
+	width: 135px;
+	height: 38px;
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	font-size: 14px;
+	background-color: #63a63e;
+	text-transform: uppercase;
+}
+
+.item-buy:hover {
+	background-color: #5fbb2d;
+}
+
+.item-buy a {
+	color: #ffffff;
+}
+
+.item-bookmarks {
+	width: 129px;
+	height: 32px;
+	border: 3px solid #63a63e;
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	font-size: 14px;
+	background-color: #ffffff;
+	text-transform: uppercase;
+}
+
+.item-bookmarks:hover {
+	border-color: #32425c;
+}
+
+
+.item-bookmarks a {
+	color: #32425c;
 }
 
 /*Footer*/
