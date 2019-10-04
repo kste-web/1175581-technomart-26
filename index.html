@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+  	<link href='https://fonts.googleapis.com/css?family=Cuprum:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
@@ -13,7 +14,7 @@
 	  		<section class="header-top">
 	  			<div class="header-top-left">
 			  		<p class="logo">
-			  			<img width="109" height="19" src="img/logo.svg" alt="Логотип магазина Техномарт">  
+			  				<img width="109" height="19" src="img/logo.svg" alt="Логотип магазина Техномарт"> 
 			  		</p>
 			  		<div class="search-field">
 			  			<input type="text" placeholder="Поиск:">
@@ -46,21 +47,13 @@
 	  				<address class="header-address">
 	  					<p class="header-phone">
 	  						<a href="tel:+7(812)555-05-05">
-	  							<span class="icon-phone">
-	  							</span>
 	  							+7 (812) 555-05-05
-	  					</a>
+	  						</a>
 	  					</p>
 	  					<p class="header-street">г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
 	  				</address>
 		  			<div class="log-reg-buttons">
 		  				<a class="log-button" href="">
-		  					<span class="icon-login">
-		  						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
-								    <path fill="#32425C" d="M14.875 8.5L6 0v6H0v5h6v6z"/>
-								    <path fill="#32425C" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
-								</svg>
-		  					</span>
 		  					Войти
 		  				</a>
 		  				<a class="reg-button" href="">Регистрация</a>
@@ -99,8 +92,29 @@
   					<h2>Техника</h2>
   					<a class="main-nav-link" href="">Для стройки</a>
   					<div class="technics-icon"></div>
-  				</li>
-	  			<li class="main-slider">
+  				</li>	
+				<li class="main-nav-item discount-item">
+					<div class="discount-item-wrap">
+		  				<h2>Скидки 50%</h2>
+		  				<a class="main-nav-link" href="">На 350 товаров</a>
+		  				<div class="discount-icon"></div>
+	  				</div>
+				</li>
+				<li class="main-nav-item delivery-item">
+					<div class="delivery-item-wrap">
+						<h2>Доставка</h2>
+						<a class="main-nav-link" href="">Бесплатно</a>
+						<div class="delivery-icon"></div>
+					</div>
+				</li>
+	  		</ul>
+	  		<div class="main-slider">
+	  				<input class="visually-hidden" type="radio" id="slide-1" name="toggle" checked>
+        			<input class="visually-hidden" type="radio" id="slide-2" name="toggle">
+        			<div class="slider-controls">
+	  					 <label class="slider-controls-one" for="slide-1"></label>
+         				 <label class="slider-controls-two" for="slide-2"></label>
+	  				</div>
 	  				<div class="slider slider-one">
 		  				<div class="slider-description">
 			  				<h2>Дрели</h2>
@@ -115,23 +129,8 @@
 	  				</div>
 	  				<button class="icon-left"></button>
 		  			<button class="icon-right"></button>
-	  				<a class="slider-button" href="">Открыть каталог</a>
-	  			</li>	
-	  			<li>
-	  				<ul class="aside-list">
-	  					<li class="main-nav-item discount-item">
-			  				<h2>Скидки 50%</h2>
-			  				<a class="main-nav-link" href="">На 350 товаров</a>
-			  				<div class="discount-icon"></div>
-	  					</li>
-	  					<li class="main-nav-item delivery-item">
-	  						<h2>Доставка</h2>
-	  						<a class="main-nav-link" href="">Бесплатно</a>
-	  						<div class="delivery-icon"></div>
-	  					</li>
-	  				</ul>
-	  			</li>
-	  		</ul>
+	  				<a class="slider-link" href="">Открыть каталог</a>
+	  			</div>
   		</section>
   		<section class="popular-products container">
   			<div class="popular-header">
@@ -143,31 +142,48 @@
   					<div class="catalog-item-info">
 						<img class="catalog-image" width="218" height="170"src="img/item-image.jpg" alt="перфоратор Bosch 9000">
 						<h3>Перфоратор BOSCH<br> BFG 9000</h3>
-						<del>32500 Р.</del>
+						<del class="discount">32500 Р.</del>
 						<a href="" class="catalog-item-price">22500 Р.</a>
+						<div class="catalog-item-action">
+							<a class="item-buy" href="">Купить</a>
+							<a class="item-bookmarks" href="">В закладки</a>
+						</div>
 					</div>
   				</li>
   				<li>
   					<div class="catalog-item-info">
 						<img class="catalog-image" width="218" height="170"src="img/item.jpg" alt="перфоратор Bosch 3000">
 						<h3>Перфоратор BOSCH<br> BFG 3000</h3>
-						<del>22500 Р.</del>
+						<del class="discount">22500 Р.</del>
 						<a href="" class="catalog-item-price">15500 Р.</a>
+						<div class="catalog-item-action">
+							<a class="item-buy" href="">Купить</a>
+							<a class="item-bookmarks" href="">В закладки</a>
+						</div>
 					</div>
   				</li>
   				<li>
   					<div class="catalog-item-info">
 						<img width="218" height="170"src="img/item-1.jpg" src="photo.jpg" alt="перфоратор Bosch 6000">
 						<h3>Перфоратор BOSCH<br> BFG 6000</h3>
-						<del>30500 Р.</del>
+						<del class="discount">30500 Р.</del>
 						<a href="" class="catalog-item-price">25500 Р.</a>
+						<div class="catalog-item-action">
+							<a class="item-buy" href="">Купить</a>
+							<a class="item-bookmarks" href="">В закладки</a>
+						</div>
 					</div>
   				</li>
   				<div class="catalog-item-info">
 					<img width="218" height="170"src="img/item.jpg" src="photo.jpg" alt="перфоратор Bosch 2000">
 					<img class="new-mark" width="60" height="59" src="img/new-flag.png" alt="новинка">
 					<h3>Перфоратор BOSCH<br> BFG 2000</h3>
+					<del class="discount">30500 Р.</del>
 					<a href="" class="catalog-item-price">12500 Р.</a>
+					<div class="catalog-item-action">
+						<a class="item-buy" href="">Купить</a>
+						<a class="item-bookmarks" href="">В закладки</a>
+					</div>
 				</div>  			
 			</ul>
   		</section>
@@ -203,60 +219,42 @@
   					</li>
   				</ul>
   		</section>
-  		<section class="services container">
-  			<h2 class="services-header">Сервисы</h2>
-  			<p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
-			   Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-			</p>
-			<div class="services-wrap">
-				<ul class="services-menu">
-					<li class="services-menu-item services-active"><button>Доставка</button></li>
-					<li class="services-menu-item"><button>Гарантия</button></li>
-					<li class="services-menu-item"><button>Кредит</button></li>
-				</ul>
-				<div class="services-info-delivery">
-					<h3 class="services-info-header">Доставка</h3>
-					<p>Мы с удовольствием доставим ваш товар прямо<br>
-				       к вашему подъезду совершенно бесплатно!<br>
-				   	   Ведь мы неплохо заработаем,<br>
-				  	   поднимая его на ваш этаж!
-					</p>
-				</div>
-				<div class="services-image delivery-image">
-				</div>
-			</div>
-			<div class="services-wrap">
-				<ul class="services-menu">
-					<li class="services-menu-item"><button>Доставка</button></li>
-					<li class="services-menu-item services-active"><button>Гарантия</button></li>
-					<li class="services-menu-item"><button>Кредит</button></li>
-				</ul>
-				<div class="services-info-guarantee">
-					<h3 class="services-info-header">Гарантия</h3>
-					<p>Если купленный у нас товар поломается или заискрит,<br>
-						а также в случае пожара, спровоцированного его возгоранием,<br> 
-						вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
-						сгоревший товар на новый.<br>
-						Дом уж восстановите как-нибудь сами.
-					</p>
-				</div>
-				<div class="services-image guarantee-image">
-				</div>
-			</div>
-			<div class="services-wrap">
-				<ul class="services-menu">
-					<li class="services-menu-item"><button>Доставка</button></li>
-					<li class="services-menu-item"><button>Гарантия</button></li>
-					<li class="services-menu-item services-active"><button>Кредит</button></li>
-				</ul>
-				<div class="services-info-credit">
-					<h3 class="services-info-header">Кредит</h3>
-					<p>Залезть в долговую яму стало проще!<br>
-						Кредитные консультанты придут вам на помощь.
-					</p>
-					<a class="send-request-button"href="">Отправить заявку</a>
-				</div>
-				<div class="services-image credit-image">
+  		<section class="services">
+  			<div class="container">
+	  			<h2 class="services-header">Сервисы</h2>
+	  			<p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+				   Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+				</p>
+				<div class="services-wrap">
+					<ul class="services-menu">
+						<li class="services-menu-item services-active"><button>Доставка</button></li>
+						<li class="services-menu-item"><button>Гарантия</button></li>
+						<li class="services-menu-item"><button>Кредит</button></li>
+					</ul>
+					<div class="services-info delivery-info">
+						<h3 class="services-info-header">Доставка</h3>
+						<p>Мы с удовольствием доставим ваш товар прямо<br>
+					       к вашему подъезду совершенно бесплатно!<br>
+					   	   Ведь мы неплохо заработаем,<br>
+					  	   поднимая его на ваш этаж!
+						</p>
+					</div>
+					<div class="services-info guarantee-info">
+						<h3 class="services-info-header">Гарантия</h3>
+						<p>Если купленный у нас товар поломается или заискрит,<br>
+							а также в случае пожара, спровоцированного его возгоранием,<br> 
+							вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+							сгоревший товар на новый.<br>
+							Дом уж восстановите как-нибудь сами.
+						</p>
+					</div>
+					<div class="services-info credit-info">
+						<h3 class="services-info-header">Кредит</h3>
+						<p>Залезть в долговую яму стало проще!<br>
+							Кредитные консультанты придут вам на помощь.
+						</p>
+						<a class="send-request-button"href="">Отправить заявку</a>
+					</div>
 				</div>
 			</div>
   		</section>
