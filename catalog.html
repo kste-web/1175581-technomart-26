@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Каталог товаров</title>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-  	<link href='https://fonts.googleapis.com/css?family=Cuprum:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -28,11 +28,11 @@
 		  		<div class="header-top-right">  			
 			  			<a class="bookmarks-button" href="">
 			  				Закладки:
-			  				<span class="bookmarks-count"> 0</span>
+			  				<span class="bookmarks-count">&nbsp;0</span>
 			  			</a>  		  
-			  			<a class="cart-button"  href="">
+			  			<a class="cart-button cart-button-active"  href="">
 			  				Корзина:
-			  				<span class="items-count"> 0</span>
+			  				<span class="items-count">&nbsp;10</span>
 			  			</a>
 			  			<a class="order-button" href="">Оформить заказ</a>
 		  		</div>
@@ -97,65 +97,82 @@
 						Фильтр:
 					</p>
 					<p class="price-header">Цена:</p>
-					<div class="price-filter">
-						<input type="range" min="0" max="30000" value="20000" name="" >
-					</div>
-					<div class="count-price">
-							<p>
-								<span class="min-price">0</span>
-								-
-								<span class="max-price">30000</span>
-							</p>
+					<div class="filter-range">
+						<div class="range-controls">
+							<div class="range-controls-wrap">
+								<div class="scale">
+									<div class="bar"></div>
+								</div>
+								<div class="range-toggle range-toggle-min"></div>
+								<div class="range-toggle range-toggle-max"></div>
+							</div>
 						</div>
-					<form method="get" action="https://echo.htmlacademy.ru">
+						<div class="price-controls">
+							<label class="min-price">
+								<input type="text" name="min-price" value="0">
+							</label>
+							<label class="max-price">						
+								<input type="text" name="max-price" value="30000">
+							</label>
+						</div>
+					</div>
+					<form method="get" action="https://echo.htmlacademy.ru" class="manufactures-form">
 						<fieldset class="manufactures-filter">
 							<legend>Производители:</legend>
 							<ul class="manufactures-list">
-								<li>
+								<li class="manufactures-list-item">
 									<label>
-										<input type="checkbox" name="bosch" checked>
-										Bosch
+										<input class="check-input" type="checkbox" name="bosch" checked>
+										<span class="custom-check"></span>
+										<span class="checkbox-desc">Bosch</span>
 									</label>
 								</li>
-								<li>
+								<li class="manufactures-list-item">
 									<label>
-										<input type="checkbox" name="interskol">
-										Интерскол
+										<input class="check-input" type="checkbox" name="interskol">
+										<span class="custom-check"></span>
+										<span class="checkbox-desc">Интерскол</span>
 									</label>
 								</li>
-								<li>
+								<li class="manufactures-list-item">
 									<label>
-										<input type="checkbox" name="makita" checked>
-										Makita
+										<input class="check-input" type="checkbox" name="makita" checked>
+										<span class="custom-check"></span>
+										<span class="checkbox-desc">Makita</span>
 									</label>
 								</li>
-								<li>
+								<li class="manufactures-list-item">
 									<label>
-										<input type="checkbox" name="dewalt">
-										Dewalt
+										<input class="check-input" type="checkbox" name="dewalt">
+										<span class="custom-check"></span>
+										<span class="checkbox-desc">Dewalt</span>
 									</label>
 								</li>
-								<li>
+								<li class="manufactures-list-item">
 									<label>
-										<input type="checkbox" name="hitachi">
-										Hitachi
+										<input class="check-input" type="checkbox" name="hitachi">
+										<span class="custom-check"></span>
+										<span class="checkbox-desc">Hitachi</span>
 									</label>
 								</li>
 							</ul>
 						</fieldset>
-						<fieldset>
-							<legend class="supply-filter">Питание:</legend>
+						<fieldset class="supply-filter">
+							<legend>Питание:</legend>
 							<ul class="supply-list">
-								<li>
+								<li class="supply-list-item">
 									<label>
-										<input type="radio" name="supply" value="battery" checked>
-										Аккумуляторные
+										<input class="radio-input" type="radio" name="supply" value="battery" checked>
+										<span class="custom-radio"></span>
+										<span class="radio-desc">Аккумуляторные</span>
 									</label>
 								</li>
-								<li>
+								<li class="supply-list-item">
 									<label>
-										<input type="radio" name="supply" value="network">
-										Сетевые
+										<input class="radio-input" type="radio" name="supply" value="network">
+										<span class="custom-radio"></span>
+										<span class="radio-desc">Сетевые</span>
+
 									</label>
 								</li>
 							</ul>
@@ -163,20 +180,17 @@
 						<button class="button-filter" type="submit">Показать</button>
 					</form>
 				</section>
-				<section>
-					<!-- Тут будет форма для сортировки-->
-				</section>
 				<section class="catalog-items">
 					<h2 class="visually-hidden">Каталог товаров</h2>
 					<div class="sorting">
 						<p class="sort-header">Сортировка:</p>
 						<ul class="sort-list">
-							<li class="price-sort-item"><button class="price-sort-button">По цене</button></li>
-							<li class="type-sort-item"><button class="type-sort-button">По типу</button></li>
-							<li class="func-sort-item"><button class="func-sort-button">По функционалу</button></li>
+							<li class="price-sort"><button class="price-sort-button sort-button sort-active">По цене</button></li>
+							<li class="type-sort"><button class="type-sort-button sort-button">По типу</button></li>
+							<li class="func-sort"><button class="func-sort-button sort-button">По функционалу</button></li>
 						</ul>
 						<div class="up-down-buttons">
-							<button class="icon-up"></button>
+							<button class="icon-up class icon-up-active"></button>
 							<button class="icon-down"></button>
 						</div>
 					</div>
@@ -256,7 +270,6 @@
 								</div>
 							</div>
 						</li>
-
 						<li>
 							<div class="catalog-item-info">
 								<img width="218" height="170"src="img/item.jpg" alt="перфоратор Bosch 3000">
@@ -295,12 +308,23 @@
 							</div>
 						</li>
 					</ul>
-				</section>
-				<section>
-					<!-- Тут будет Пагинация-->
+					<div class="pagination">
+						<button class="page-number page-number-active">1</button>
+						<button class="page-number">2</button>
+						<button class="page-number">3</button>
+						<button class="next-page">Следующая</button>
+					</div>
 				</section>
 			</div>
 		</div>
+		<section class="catalog-about-wrap">
+			<div class="catalog-about">
+			<h2>Пара слов о перфораторах</h2>
+			<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+			Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+			</p>
+			</div>
+		</section>
 	</main>
 	<footer class="footer-container">
 	  		<div class="footer-top-wrap">
@@ -336,9 +360,9 @@
 		  				Все права защищены
 		  			</p>
 		  			<ul class="footer-bottom-social">
-		  				<li class="social"><a class="vk" href="https://vk.com"></a></li>
-		  				<li class="social"><a class="fb" href="https://facebook.com"></a></li>
-		  				<li class="social"><a class="insta" href="https://instagram.com"></a></li>
+		  				<li class="social vk"><a href="https://vk.com"></a></li>
+		  				<li class="social fb"><a href="https://facebook.com"></a></li>
+		  				<li class="social insta"><a href="https://instagram.com"></a></li>
 		  			</ul>
 		  			<div class="footer-bottom-info">
 			  			<div class="mail-to">
@@ -353,18 +377,18 @@
 		  		</section>
 	  		</div>
 	  	</footer>
-	<section class="modal-add">
-		<h2>Товар добавлен в корзину</h2>
-		<img width="66" height="66" src="img/modal-check.svg" alt="товар добавлен в корзину">
-		<ul>
-			<li>
-				<a href="">Оформить заказ</a>
-			</li>
-			<li>
-				<a href="">Продолжить покупки</a>
-			</li>
-		</ul>
-		<button type="button" aria-label="закрыть окно">x</button>
+	<section class="modal modal-view modal-add">
+		<div class="form-line"></div>
+		<div class="modal-add-top">
+			<img width="66" height="66" src="img/modal-check.svg" alt="товар добавлен в корзину">
+			<h2>Товар добавлен в корзину!</h2>
+		</div>
+		<div class="button-bg">
+				<button class="send-data send-order" type="button">Оформить заказ</button>
+				<button class="send-data contunie-buy" type="button">Продолжить покупки</button>
+		</div>
+		<button class="close-window" type="button" aria-label="закрыть окно">
+			</button>
 	</section>
 </body>
 </html>
